@@ -1,0 +1,103 @@
+
+Table game_data {
+  gameId integer
+  season integer
+  week integer
+  gameDate time
+  gameTimeEast time
+  homeTeamAbbr string
+  visitorTeamAbbr string
+  homeFinalScore integer
+  visitorFinalScore integer
+}
+
+
+
+
+Game data
+
+gameId
+season
+week
+gameDate
+gameTimeEast
+homeTeamAbbr
+visitorTeamAbbr
+homeFinalScore
+visitorFinalScore
+
+Play data
+
+gameId
+playId
+ballCarrierId
+ballCarrierName
+playDescription
+quarter 
+down
+yardsToGo
+possessionTeam
+defensiveTeam
+yardlineSide
+yardlineNumber
+gameClock
+preSnapHomeScore
+preSnapVisitorScore
+passResult
+passLength
+penaltyYards
+prePenaltyPlayResult
+playResult
+playNullifiedByPenaltyfor no.
+absoluteYardlineNumber
+offenseFormation
+defendersInTheBox
+passProbability
+preSnapHomeTeamWinProbability
+preSnapVisitorTeamWinProbability
+homeTeamWinProbabilityAdded
+visitorTeamWinProbabilityAdded
+expectedPoints
+expectedPointsAdded
+foulName[i]
+foulNFLId[i]
+
+Player data
+
+nflId
+height
+weight
+birthDate 
+collegeName
+position
+displayName
+
+Tackles data
+
+gameId
+playId
+nflId
+tackle
+assist
+forcedFumble
+pff_missedTackle
+
+Tracking data
+
+gameId
+playId
+nflId
+displayName
+frameId
+time
+jerseyNumber
+club
+playDirection
+x
+y
+s
+a
+dis
+o
+dir
+event
