@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#Resource folder to ignore giant CSV base files
+base_datasets/
+
 # C extensions
 *.so
 
