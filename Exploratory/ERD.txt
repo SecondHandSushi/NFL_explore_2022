@@ -8,7 +8,7 @@ Table game_data {
   homeTeamAbbr string
   visitorTeamAbbr string
   homeFinalScore integer
-  visitorFinalScore integer
+  visitorFinalScore integer 
 }
 
 
