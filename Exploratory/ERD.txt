@@ -1,103 +1,86 @@
-
-Table game_data {
-  gameId integer
-  season integer
-  week integer
-  gameDate time
-  gameTimeEast time
-  homeTeamAbbr string
-  visitorTeamAbbr string
-  homeFinalScore integer
-  visitorFinalScore integer 
+table play_data{
+gameId integer
+playId  integer [primary key]
+ballCarrierId integer
+ballCarrierDisplayName varchar(30)
+playDescription varchar(150)
+quarter integer
+down integer
+yardsToGo integer
+possessionTeam varchar(10)
+defensiveTeam varchar(10)
+yardlineSide varchar(10)
+yardlineNumber integer
+gameClock time
+preSnapHomeScore integer
+preSnapVisitorScore integer 
+passResult varchar(30)
+passLength text
+penaltyYards integer
+prePenaltyPlayResult integer
+playResult integer
+playNullifiedByPenalty text
+absoluteYardlineNumber integer
+offenseFormation varchar(15)
+defendersInTheBox integer
+passProbability float
+preSnapHomeTeamWinProbability float
+preSnapVisitorTeamWinProbability float
+homeTeamWinProbabilityAdded float
+visitorTeamWinProbilityAdded float
+expectedPoints integer
+expectedPointsAdded integer
+foulName1 varchar(30)
+foulName2 varchar(30)
+foulNFLId1 varchar(30)
+foulNFLId2 varchar(30)
+}
+table player_data{
+nflId integer  [primary key]
+height integer
+weight integer
+birthDate date
+collegeName varchar(30)
+position varchar(5)
+displayName varchar(30)
+}
+table game_data{
+gameId integer [primary key]
+season integer
+week integer
+gameDate date
+gameTimeEastern time
+homeTeamAbbr varchar(3)
+visitorTeamAbbr varchar(3)
+homeFinalScore integer
+visitorFinalScore integer
+}
+table tackles_data{
+gameId integer
+playId integer
+nflId integer
+tackle integer
+assist integer
+forcedFumble integer
+pff_missedTackle integer
 }
 
-
-
-
-Game data
-
-gameId
-season
-week
-gameDate
-gameTimeEast
-homeTeamAbbr
-visitorTeamAbbr
-homeFinalScore
-visitorFinalScore
-
-Play data
-
-gameId
-playId
-ballCarrierId
-ballCarrierName
-playDescription
-quarter 
-down
-yardsToGo
-possessionTeam
-defensiveTeam
-yardlineSide
-yardlineNumber
-gameClock
-preSnapHomeScore
-preSnapVisitorScore
-passResult
-passLength
-penaltyYards
-prePenaltyPlayResult
-playResult
-playNullifiedByPenaltyfor no.
-absoluteYardlineNumber
-offenseFormation
-defendersInTheBox
-passProbability
-preSnapHomeTeamWinProbability
-preSnapVisitorTeamWinProbability
-homeTeamWinProbabilityAdded
-visitorTeamWinProbabilityAdded
-expectedPoints
-expectedPointsAdded
-foulName[i]
-foulNFLId[i]
-
-Player data
-
-nflId
-height
-weight
-birthDate 
-collegeName
-position
-displayName
-
-Tackles data
-
-gameId
-playId
-nflId
-tackle
-assist
-forcedFumble
-pff_missedTackle
-
-Tracking data
-
-gameId
-playId
-nflId
-displayName
-frameId
-time
-jerseyNumber
-club
-playDirection
-x
-y
-s
-a
-dis
-o
-dir
-event
+table tracking_data{
+gameId integer
+playId integer
+nflId integer
+displayName varchar(30)
+frameId integer
+time timestamp
+jerseyNumber integer
+club varchar(15)
+playDirection varchar(15)
+x float
+y float
+s float
+a float
+dis float
+o float
+dir float
+event varchar(30)
+}
